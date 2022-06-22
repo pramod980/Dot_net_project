@@ -1,0 +1,26 @@
+C:\Users\acharya\source\repos\House  Rental\House  Rental\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\acharya\source\repos\House  Rental\House  Rental\bin\Debug\net6.0\appsettings.json
+C:\Users\acharya\source\repos\House  Rental\House  Rental\bin\Debug\net6.0\House  Rental.staticwebassets.runtime.json
+C:\Users\acharya\source\repos\House  Rental\House  Rental\bin\Debug\net6.0\House  Rental.exe
+C:\Users\acharya\source\repos\House  Rental\House  Rental\bin\Debug\net6.0\House  Rental.deps.json
+C:\Users\acharya\source\repos\House  Rental\House  Rental\bin\Debug\net6.0\House  Rental.runtimeconfig.json
+C:\Users\acharya\source\repos\House  Rental\House  Rental\bin\Debug\net6.0\House  Rental.dll
+C:\Users\acharya\source\repos\House  Rental\House  Rental\bin\Debug\net6.0\House  Rental.pdb
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\House  Rental.csproj.AssemblyReference.cache
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\House  Rental.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\House  Rental.AssemblyInfoInputs.cache
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\House  Rental.AssemblyInfo.cs
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\House  Rental.csproj.CoreCompileInputs.cache
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\House  Rental.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\House  Rental.RazorAssemblyInfo.cache
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\House  Rental.RazorAssemblyInfo.cs
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\scopedcss\bundle\House  Rental.styles.css
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\scopedcss\projectbundle\House  Rental.bundle.scp.css
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\House  Rental.dll
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\refint\House  Rental.dll
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\House  Rental.pdb
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\House  Rental.genruntimeconfig.cache
+C:\Users\acharya\source\repos\House  Rental\House  Rental\obj\Debug\net6.0\ref\House  Rental.dll
