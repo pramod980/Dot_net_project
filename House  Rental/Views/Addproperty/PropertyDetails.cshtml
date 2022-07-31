@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] ="Property Detailed";
+}
+@model IEnumerable<House__Rental.Models.PropertyRecord>
+<div class="row justify-content-md-start">
+    <div class="col-sm-12">
+        <h3 class="text-center text-primary">Property Detailed</h3>
+        <a class="btn btn-success" asp-action="Addproperty" asp-controller="Addproperty">Add property</a>
+        @if(TempData["error"]is not null)
+		{
+			<div class="alert alert-danger">@TempData["error"]</div>
+		}
+
+
+		@if(TempData["msg"]is not null)
+		{
+			<div class="alert alert-success">@TempData["msg"]</div>
+		}
+        <table class="table table-border" >
+            <thead>
+                <th>Address</th>
+                <th>PropertyType</th>
+                <th>Rentalperiod</th>
+                <th>AvailableDate</th>
+                <th>Number_of_Bedrom</th>
+                <th>Room_size</th>
+                <th>Total_Rent</th>
+                <th>Deposite</th>
+                <th>Prepaid_rent</th>
+                <th>Extra_expense</th>
+                <th>Owner_name</th>
+                <th>Owner_Email</th>
+                <th>Owner_contact</th>
+            </thead>
+            <tbody>
+                @foreach(var p in Model)
+                {
+                    <tr class="text-center">
+                        <td>@p.Address</td>
+                        <td>@p.PropertyType</td>
+                        <td>@p.Rentperiod</td>
+                        <td>@p.AvaialbleDate</td>
+                        <td>@p.Number_of_Bedrom</td>
+                        <td>@p.Room_size</td>
+                        <td>@p.Total_Rent</td>
+                        <td>@p.Deposite</td>
+                        <td>@p.Prepaid_rent</td>
+                        <td>@p.Extra_expense</td>
+                        <td>@p.Owner_name</td>
+                        <td>@p.Owner_Email</td>
+                        <td>@p.Owner_contact</td>
+                        <td>
+                            <a class="btn btn-primary" asp-controller="Addproperty" asp-action="Edit" asp-route-id="@p.Id">Edit</a>
+                            <a class="btn btn-danger"  asp-controller="Addproperty" asp-action="Remove" asp-route-id="@p.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+        	

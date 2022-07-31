@@ -33,25 +33,18 @@
                          </li>
                          <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Nav_image/logo.png" /></a>
                           <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index" style="margin-left:30px">Home</a>
-                            <li>
-                            <form class="nosubmit">
-                              <input class="nosubmit" type="search" placeholder="Search...">
-                            </form>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index" style="margin-left:30px margin-top:20px">Home</a>
                             </li>
-                    </ul>
-                    <ul class="left-item">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Signup" asp-action="Signup">Signup</a>
-                        </li>
-                        <li class="nav-item">
+                               <li class="nav-item" id="Add">
                             <a class="nav-link" asp-area="" asp-controller="Addproperty" asp-action="Addproperty">Add property</a>
                         </li>
+                            <li class="nosubmit">
+                              <input class="nosubmit" type="search" placeholder="Search...">
+                            </li>
                     </ul>
+                  
                 </div>
+                <partial name="_LoginPartial" />
             </div>
         </nav>
     </header>

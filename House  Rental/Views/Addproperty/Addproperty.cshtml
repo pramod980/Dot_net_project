@@ -1,119 +1,158 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Add Property";
 }
+@model House__Rental.Models.PropertyRecord;
 
 <div class="home">
 	 <img src="~/addproperty_image/add.jpg" class="img-fluid" alt="Loading image">
      <h1>Add your property for rent in House Rental</h1>
      <p>Add your property here free of cost for renting.</p>
 </div>
+<hr/>
 
-<div class="location">
-    <h3>Property Location</h3>
-    <h5>Address</h5>
-    <input type="text" placeholder="Address" required />
-</div>
-<div class="general">
-    <div class="row col-md-12">
-        <h3>General infromation</h3>
-        <div class="col-sm-4">
-            <h5>Property type</h5>
-            <select name="house" id="house">
-            <option value="house">House</option>
-            <option value="flat">Flat</option>
-            <option value="room">Room</option>
-          </select>
+		@if(TempData["error"]is not null)
+		{
+			<div class="alert alert-danger">@TempData["error"]</div>
+		}
+
+
+		@if(TempData["msg"]is not null)
+		{
+			<div class="alert alert-success">@TempData["msg"]</div>
+		}
+                <h3 class="text text-center text-primary">Add Property Details</h3>
+<form method="post" asp-controller="Addproperty" asp-action="Addproperty">
+    
+
+			<div class="location">
+                <h3>Property Location</h3>
+				<label class="form-label" asp-for="Address"></label>
+				<input asp-for="Address" class="form-control" />
+				<span class="text-danger" asp-validation-for="Address"></span>
+			</div>
+
+
+            <div class="general">
+                <div class="row col-md-12">
+                    <h3>General Information</h3>
+
+                    <div class="col-sm-4">
+                        <label class="form-label" asp-for="PropertyType"></label>
+                        <input asp-for="PropertyType" class="form-control" placeholder="Flat/House"/>
+                        <span class="text-danger" asp-validation-for="PropertyType"></span>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label class="form-label" asp-for="Rentperiod"></label>
+                        <input asp-for="Rentperiod" class="form-control" placeholder="1years" />
+                        <span class="text-danger" asp-validation-for="Rentperiod"></span>
+                    </div>
+
+
+                    <div class="col-sm-4">
+				        <label class="form-label" asp-for="AvaialbleDate"></label>
+				        <input asp-for="AvaialbleDate" class="form-control" />
+				        <span class="text-danger" asp-validation-for="AvaialbleDate"></span>
+                    </div>
+            </div>
+            </div>
+
+
+
+
+
+              <div class="general">
+                <div class="row col-md-12">
+
+                    <div class="col-sm-4">
+                        <label class="form-label" asp-for="Number_of_Bedrom"></label>
+                        <input asp-for="Number_of_Bedrom" class="form-control" placeholder="1/2/3" />                      
+                        <span class="text-danger" asp-validation-for="Number_of_Bedrom"></span>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label class="form-label" asp-for="Room_size"></label>
+                        <input asp-for="Room_size" class="form-control" />
+                        <span class="text-danger" asp-validation-for="Room_size"></span>
+                    </div>
+
+
+                    <div class="col-sm-4">
+				        <label class="form-label" asp-for="Total_Rent"></label>
+				        <input asp-for="Total_Rent" class="form-control" />
+				        <span class="text-danger" asp-validation-for="Total_Rent"></span>
+                    </div>
+            </div>
+            </div>
+
+
+
+
+            
+              <div class="general">
+                <div class="row col-md-12">
+
+                    <div class="col-sm-4">
+                        <label class="form-label" asp-for="Deposite"></label>
+                        <input asp-for="Deposite" class="form-control" />
+                        <span class="text-danger" asp-validation-for="Deposite"></span>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label class="form-label" asp-for="Prepaid_rent"></label>
+                        <input asp-for="Prepaid_rent" class="form-control" />
+                        <span class="text-danger" asp-validation-for="Prepaid_rent"></span>
+                    </div>
+
+
+                    <div class="col-sm-4">
+				        <label class="form-label" asp-for="Extra_expense"></label>
+				        <input asp-for="Extra_expense" class="form-control" />
+				        <span class="text-danger" asp-validation-for="Extra_expense"></span>
+                    </div>
+            </div>
+            </div>
+
+
+            
+            
+              <div class="contact">
+                <div class="row col-md-12">
+                    <h3>Contact</h3>
+                    <div class="col-sm-4">
+                        <label class="form-label" asp-for="Owner_name"></label>
+                        <input asp-for="Owner_name" class="form-control" />
+                        <span class="text-danger" asp-validation-for="Owner_name"></span>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label class="form-label" asp-for="Owner_Email"></label>
+                        <input asp-for="Owner_Email" class="form-control" />
+                        <span class="text-danger" asp-validation-for="Owner_Email"></span>
+                    </div>
+
+
+                    <div class="col-sm-4">
+				        <label class="form-label" asp-for="Owner_contact"></label>
+				        <input asp-for="Owner_contact" class="form-control" />
+				        <span class="text-danger" asp-validation-for="Owner_contact"></span>
+                    </div>
+            </div>
+            </div>
+         
+                         
+
+
+
+			<hr/>
+			<button type="submit" class="btn btn-success" >submit</button>
+		</form>
+        <hr/>
+        <div>
+            <a type="submit" class="btn btn-success" id="show" asp-action="PropertyDetails" asp-controller="Addproperty">Show property Detailed</a>
         </div>
 
-         <div class="col-sm-4">
-            <h5>Rental Period</h5>
-            <select name="rent" id="rent">
-            <option value="month">Monthly</option>
-            <option value="sannually">Semi-annually</option>
-            <option value="Anual">Annually</option>
-          </select>
-        </div>
-
-         <div class="col-sm-4">
-            <h5>Available from</h5>
-            <input type="text" placeholder="Available from" />
-        </div>
-    </div>
-</div>
-
-
-<div class="general">
-    <div class="row col-md-12">
-        <div class="col-sm-4">
-            <h5>Bed room</h5>
-            <select name="cars" id="cars">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-             <option value="5">5</option>
-          </select>
-        </div>
-
-         <div class="col-sm-4">
-            <h5>Area</h5>
-            <input type="text" placeholder="Area" required />
-        </div>
-
-         <div class="col-sm-4">
-            <h5>Rent</h5>
-            <input type="text" placeholder="Rupees" required />
-        </div>
-    </div>
-</div>
-
-<div class="general">
-    <div class="row col-md-12">
-        <div class="col-sm-4">
-            <h5>Deposite</h5>
-            <input type="text" placeholder="Rupees" required />
-        </div>
-
-         <div class="col-sm-4">
-            <h5>Prepaid rent</h5>
-            <input type="text" placeholder="Rupees" required />
-        </div>
-
-         <div class="col-sm-4">
-            <h5>Extra expenses</h5>
-            <input type="text" placeholder="Rupees" required />
-        </div>
-    </div>
-</div>
-
-<div class="contact">
-      <div class="row col-md-12">
-          <h3>Contact</h3>
-        <div class="col-sm-4">
-            <h5>Contact Person</h5>
-            <input type="text" placeholder="Person Name" required />
-        </div>
-
-         <div class="col-sm-4">
-            <h5>Contatc person email</h5>
-            <input type="text" placeholder="Email" required />
-        </div>
-
-         <div class="col-sm-4">
-            <h5>Contact person phone number</h5>
-            <input type="text" placeholder="Contact number" required />
-        </div>
-    </div>
-</div>
-
-<div class="image">
-    <h3>Images</h3>
-      <input type="file" id="myFile" name="filename">
-</div>
-<div class=" button">
-     <input type="submit">
-</div>
+        	
 <style type="text/css">
     .home img{
     width:100%;
@@ -135,16 +174,13 @@
     font-weight: normal;
     font-size: 20px;
 }
-.location h3
-{
-    margin-top:20px;
-}
-.location h5{
-    margin-top:20px;
-}
 .location input{
     width: 300px;
     height: 45px;
+}
+.location h3
+{
+    margin-top:20px;
 }
 .general
 {
@@ -158,14 +194,14 @@
 {
     margin-top:20px;
 }
-.col-sm-4 h5
-{
-    margin-top:20px;
-}
 .col-sm-4 input{
      width: 300px;
     height: 45px;
 
+}
+.col-sm-4 select
+{
+    position:relative;
 }
 .contact
 {
@@ -174,11 +210,8 @@
 .contact h3{
     margin-top:20px;
 }
-.image h3{
-    margin-top:20px;
-}
-.button
+#show
 {
-    margin-top:20px;
+    margin-left:40%;
 }
 </style>
